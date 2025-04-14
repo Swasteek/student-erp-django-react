@@ -1,0 +1,142 @@
+/* Card Container */
+.attendance-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 32px;
+  }
+  
+  /* Title */
+  .attendance-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  /* Filter Controls */
+  .filter-controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .semester-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .semester-filter label {
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .semester-filter select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #f30101;
+    background-color: rgb(67 62 71);
+    font-size: 0.9rem;
+    min-width: 150px;
+    transition: border-color 0.2s;
+  }
+  
+  .semester-filter select:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  /* Chart Container */
+  .chart-container {
+    margin: 30px 0;
+    height: 300px;
+  }
+  
+  /* Table Styles */
+  .attendance-table {
+    margin-top: 30px;
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  th {
+    font-weight: 600;
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+  tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Loading States */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .loading-spinner {
+    color: #3498db;
+    font-size: 1.1rem;
+  }
+  
+  /* Empty States */
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .empty-state p {
+    margin-bottom: 15px;
+  }
+  
+  .reset-button {
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  
+  .reset-button:hover {
+    background: #2980b9;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .attendance-card {
+      padding: 16px;
+    }
+    
+    .filter-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    th, td {
+      padding: 8px 12px;
+    }
+  }
