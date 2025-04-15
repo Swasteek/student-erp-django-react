@@ -1,7 +1,8 @@
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from .models import Attendance  # Add this line with other imports
+from .models import Attendance, Exam  # Add this line with other imports
+from .serializers import ExamSerializer
 
 
 @api_view(['GET'])
@@ -52,3 +53,13 @@ def get_attendance(request):
         })
 
     return Response(data)
+
+
+# accounts/views.py
+@api_view(['GET'])
+def get_exam_schedule(request):
+    print("Exam endpoint hit!")  # Check Django console
+    exams = Exam.objects.all()
+    print(f"Found {exams.count()} exams")  # Verify query works
+    serializer = ExamSerializer(exams, many=True)
+    return Response(serializer.data)

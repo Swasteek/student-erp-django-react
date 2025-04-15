@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './auth/AuthContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import AttendanceCard from './components/AttendanceCard';
+import ExamScheduleCard from './components/ExamScheduleCard';
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
@@ -21,6 +22,7 @@ export default function App() {
               <ProtectedRoute>
                 <Dashboard />
                 <AttendanceCard />
+                < ExamScheduleCard />
               </ProtectedRoute>
             }
           />

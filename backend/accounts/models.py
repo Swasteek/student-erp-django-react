@@ -29,3 +29,16 @@ class Attendance(models.Model):
 
     def __str__(self):
         return f"{self.student.username} - {self.subject} ({self.date})"
+
+# accounts/models.py
+
+
+class Exam(models.Model):
+    subject = models.CharField(max_length=100)
+    exam_type = models.CharField(max_length=50, choices=[
+                                 ('MIDTERM', 'Midterm'), ('FINAL', 'Final')])
+    date = models.DateField()
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    room = models.CharField(max_length=50)
+    syllabus = models.TextField(blank=True)

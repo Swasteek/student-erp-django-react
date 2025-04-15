@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from accounts.views import get_profile, get_attendance
+from accounts.views import get_profile, get_attendance, get_exam_schedule
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,5 @@ urlpatterns = [
     ])),
     path('api/profile/', get_profile, name='profile'),
     path('api/attendance/', get_attendance, name='attendance'),
+    path('api/exams/', get_exam_schedule, name='exams'),  # Not api/exams/
 ]
